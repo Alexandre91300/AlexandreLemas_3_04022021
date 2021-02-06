@@ -1,0 +1,11 @@
+@mixin reset-all {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    transition: 400ms;
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+    object-fit: cover;
+}

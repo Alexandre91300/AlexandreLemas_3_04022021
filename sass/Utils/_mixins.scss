@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Shrikhand&display=swap');
+@mixin font-title {
+    font-family: 'Shrikhand', cursive;
+}
+
+@mixin font-texte {
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin flex($align:center,$justify:center){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin tablette-only {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop-only {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}

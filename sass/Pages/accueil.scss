@@ -1,0 +1,211 @@
+@import "../Utils/variables";
+@import "../Utils/mixins";
+@import "../Base/reset";
+@import "../Composants/button";
+
+* {
+    @include reset-all;
+    @include font-texte;
+    object-fit: cover;
+}
+
+.header {
+    @include flex;
+    height: 80px;
+    box-shadow: 3px 5px 15px rgba($color: #000000, $alpha: 0.2);
+
+
+    &__logo {
+        width: 200px;
+    }
+}
+
+.localisation {
+    @include flex;
+    height: 50px;
+    background-color: $color-bg-sombre;
+    color: $color-dark;
+
+    &__text {
+        margin-left: 15px;
+    }
+}
+
+.presentation {
+    @include flex(center, space-between);
+    flex-direction: column;
+    height: 290px;
+    background-color: $color-bg;
+    text-align: center;
+    padding: 50px 0;
+
+    &__title {
+        width: 250px;
+    }
+
+    &__subtitle {
+        font-weight: normal;
+        font-size: 15px;
+        color: $color-dark;
+        max-width: 320px;
+
+    }
+
+    &__btn {
+        @include button;
+    }
+}
+
+.fonctionnement {
+    @include flex(center, space-between);
+    flex-direction: column;
+    height: 420px;
+    padding: 50px 0;
+
+    &__title {
+        width: 100%;
+        text-align: start;
+        padding-left: 20px;
+    }
+
+    &__box {
+        @include flex(center, flex-start);
+        background-color: $color-bg;
+        height: 70px;
+        width: 80%;
+        border-radius: 20px;
+        box-shadow: 3px 5px 15px rgba($color: #000000, $alpha: 0.2);
+        padding: 0 10px;
+
+        &__chiffre {
+            @include flex;
+            transform: translateX(-20px);
+            background-color: $color-primaire;
+            color: white;
+            border-radius: 100%;
+            width: 25px;
+            height: 25px;
+            font-size: 15px;
+        }
+
+        &__icon {
+            width: 25px;
+            margin-right: 10px;
+            color: $color-dark;
+
+            &--color {
+                color: $color-primaire;
+            }
+        }
+    }
+}
+
+.restaurant {
+    @include flex(center, start);
+    flex-direction: column;
+    background-color: $color-bg;
+    height: auto;
+    padding: 50px 0;
+
+    &__title {
+        width: 100%;
+        padding-left: 20px;
+        margin-bottom: 25px;
+    }
+
+    &__box {
+        width: 290px;
+        height: 225px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 3px 5px 15px rgba($color: #000000, $alpha: 0.2);
+        margin-bottom: 20px;
+
+        &__img {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        &__title {
+            font-size: 18px;
+            margin: 5px 0 5px 10px;
+        }
+
+        &__subtitle {
+            font-weight: normal;
+            font-size: 15px;
+            color: $color-dark;
+            margin-left: 10px;
+
+        }
+
+        &__icon {
+            @include flex;
+            transform: translate(220px, -30px);
+            width: 50px;
+            transition-timing-function: ease-in-out;
+
+
+            &>button:focus+.restaurant__box__icon--plein {
+                transform: scale(1);
+                z-index: 10;
+            }
+            &>button:focus{
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            &>button{
+                border: none;
+                background-color: #fff;
+                opacity: 1;
+                transform: scale(1);
+
+            }
+
+            &--plein {
+                // transform: translate(214px, -26px);
+                width: 23px;
+                height: 21px;
+                position: absolute;
+                transform: scale(0);
+            }
+        }
+
+        &__nouveau {
+            @include flex;
+            border-radius: 2px;
+            background-color: #aadfd2;
+            color: #40886b;
+            width: 70px;
+            height: 30px;
+            font-size: 12px;
+            transform: translate(210px, -210px);
+        }
+    }
+}
+
+.footer {
+    color: #fff;
+    background-color: $color-dark;
+    @include flex(flex-start, center);
+    flex-direction: column;
+    padding: 20px;
+
+    &__logo {
+        width: 100px;
+        margin-bottom: 20px;
+    }
+
+    &__nav {
+        @include flex(start, space-between);
+        flex-direction: column;
+        height: 100px;
+
+        &>li>i {
+            width: 20px;
+            margin-right: 10px;
+        }
+    }
+}

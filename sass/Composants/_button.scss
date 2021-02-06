@@ -1,0 +1,9 @@
+@mixin button($w:210px,$h:50px) {
+    width: $w;
+    height: $h;
+    border: 1px solid $color-bg;
+    border-radius: 50px;
+    color: #fff;
+    background: linear-gradient($color-secondaire, $color-primaire);
+    font-size: 15px;
+}

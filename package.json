@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/Pages/accueil.scss:./css/accueil.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexandre91300/AlexandreLemas_3_04022021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexandre91300/AlexandreLemas_3_04022021/issues"
+  },
+  "homepage": "https://github.com/Alexandre91300/AlexandreLemas_3_04022021#readme"
+}
