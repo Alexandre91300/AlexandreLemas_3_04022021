@@ -11,6 +11,12 @@
 </head>
 
 <body>
+
+    <div class="loader">
+        <div class="loader__cube"></div>
+        <div class="loader__cube loader__cube--2"></div>
+        <div class="loader__cube loader__cube--3"></div>
+    </div>
     <header class="header">
         <img src="images/logo/ohmyfood@2x.svg" class="header__logo" alt="Logo oh my food">
     </header>
@@ -23,7 +29,7 @@
     <section class="presentation">
         <h1 class="presentation__title">Réserver le menu qui vous convient</h1>
         <h2 class="presentation__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins.</h2>
-        <button class="presentation__btn">Explorer nos restaurants</button>
+        <button class="presentation__btn"><a href="#restaurant">Explorer nos restaurants</a></button>
     </section>
 
     <section class="fonctionnement">
@@ -36,63 +42,65 @@
         <div class="fonctionnement__box">
             <p class="fonctionnement__box__chiffre">2</p>
             <i class="fas fa-list-ul fonctionnement__box__icon"></i>
-            <p class="fonctionnement__box__text">Choisissez un restaurant</p>
+            <p class="fonctionnement__box__text">Composez votre menu</p>
         </div>
         <div class="fonctionnement__box">
             <p class="fonctionnement__box__chiffre">3</p>
             <i class="fas fa-store fonctionnement__box__icon fonctionnement__box__icon--color"></i>
-            <p class="fonctionnement__box__text">Choisissez un restaurant</p>
+            <p class="fonctionnement__box__text">Dégustez au restaurant</p>
         </div>
     </section>
 
-    <section class="restaurant">
+    <section class="restaurant" id="restaurant">
         <h1 class="restaurant__title">Restaurants</h1>
-        <div class="restaurant__box">
-            <img src="images/restaurants/palette-gout.jpg" alt="" class="restaurant__box__img">
-            <h2 class="restaurant__box__title">La palette du goût</h2>
-            <p class="restaurant__box__subtitle">Ménilmontant</p>
-            <div class="restaurant__box__icon">
-                <button>
-                    <i class="far fa-heart fa-lg restaurant__box__icon--vide"></i>
-                </button>
-                <img src="images/icons/coeur.svg" class="restaurant__box__icon--plein" alt="">
-            </div>
-            <p class="restaurant__box__nouveau">Nouveau</p>
+        <div>
+            <div class="restaurant__box">
+                <img src="images/restaurants/palette-gout.jpg" alt="" class="restaurant__box__img">
+                <h2 class="restaurant__box__title">La palette du goût</h2>
+                <p class="restaurant__box__subtitle">Ménilmontant</p>
+                <div class="restaurant__box__icon">
+                    <button>
+                        <i class="far fa-heart fa-lg restaurant__box__icon--vide"></i>
+                    </button>
+                    <img src="images/icons/coeur.svg" class="restaurant__box__icon--plein" alt="">
+                </div>
+                <p class="restaurant__box__nouveau">Nouveau</p>
 
-        </div>
-        <div class="restaurant__box">
-            <img src="images/restaurants/note-enchanté.jpg" alt="" class="restaurant__box__img">
-            <h2 class="restaurant__box__title">La note enchantée</h2>
-            <p class="restaurant__box__subtitle">Charonne</p>
-            <div class="restaurant__box__icon">
-                <button>
-                    <i class="far fa-heart fa-lg restaurant__box__icon--vide"></i>
-                </button>
-                <img src="images/icons/coeur.svg" class="restaurant__box__icon--plein" alt="">
             </div>
-            <p class="restaurant__box__nouveau">Nouveau</p>
+            <div class="restaurant__box">
+                <img src="images/restaurants/note-enchanté.jpg" alt="" class="restaurant__box__img">
+                <h2 class="restaurant__box__title">La note enchantée</h2>
+                <p class="restaurant__box__subtitle">Charonne</p>
+                <div class="restaurant__box__icon">
+                    <button>
+                        <i class="far fa-heart fa-lg restaurant__box__icon--vide"></i>
+                    </button>
+                    <img src="images/icons/coeur.svg" class="restaurant__box__icon--plein" alt="">
+                </div>
+                <p class="restaurant__box__nouveau">Nouveau</p>
 
-        </div>
-        <div class="restaurant__box">
-            <img src="images/restaurants/la-francaise.jpg" alt="" class="restaurant__box__img">
-            <h2 class="restaurant__box__title">À la française</h2>
-            <p class="restaurant__box__subtitle">Cité Rouge</p>
-            <div class="restaurant__box__icon">
-                <button>
-                    <i class="far fa-heart fa-lg restaurant__box__icon--vide"></i>
-                </button>
-                <img src="images/icons/coeur.svg" class="restaurant__box__icon--plein" alt="">
             </div>
-        </div>
-        <div class="restaurant__box">
-            <img src="images/restaurants/delice-sens.jpg" alt="" class="restaurant__box__img">
-            <h2 class="restaurant__box__title">Le délice des sens</h2>
-            <p class="restaurant__box__subtitle">Folie-Méricourt</p>
-            <div class="restaurant__box__icon">
-                <button>
-                    <i class="far fa-heart fa-lg restaurant__box__icon--vide"></i>
-                </button>
-                <img src="images/icons/coeur.svg" class="restaurant__box__icon--plein" alt="">
+            <div class="restaurant__box">
+                <img src="images/restaurants/la-francaise.jpg" alt="" class="restaurant__box__img">
+                <h2 class="restaurant__box__title">À la française</h2>
+                <p class="restaurant__box__subtitle">Cité Rouge</p>
+                <div class="restaurant__box__icon">
+                    <button>
+                        <i class="far fa-heart fa-lg restaurant__box__icon--vide"></i>
+                    </button>
+                    <img src="images/icons/coeur.svg" class="restaurant__box__icon--plein" alt="">
+                </div>
+            </div>
+            <div class="restaurant__box">
+                <img src="images/restaurants/delice-sens.jpg" alt="" class="restaurant__box__img">
+                <h2 class="restaurant__box__title">Le délice des sens</h2>
+                <p class="restaurant__box__subtitle">Folie-Méricourt</p>
+                <div class="restaurant__box__icon">
+                    <button>
+                        <i class="far fa-heart fa-lg restaurant__box__icon--vide"></i>
+                    </button>
+                    <img src="images/icons/coeur.svg" class="restaurant__box__icon--plein" alt="">
+                </div>
             </div>
         </div>
     </section>
@@ -100,10 +108,10 @@
     <footer class="footer">
         <img src="images/logo/ohmyfoog@2x-white.svg" class="footer__logo" alt="Logo oh my food">
         <ul class="footer__nav">
-            <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
-            <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
-            <li>Mentions légales</li>
-            <li>Contact</li>
+            <li><i class="fas fa-utensils"></i><a href="#">Proposer un restaurant</a></li>
+            <li><i class="fas fa-hands-helping"></i><a href="#">Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="mailto: contact@ohmyfood.com">Contact</a></li>
         </ul>
     </footer>
 
