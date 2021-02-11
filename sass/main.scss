@@ -2,9 +2,12 @@
 @import "./Utils/mixins";
 
 @import "./Base/reset";
+@import "./Layout/loader";
 
 @import "./Composants/button";
-@import "./Layout/loader";
+@import "./Composants/header";
+@import "./Composants/footer";
+
 
 @import "./Pages/accueil.scss";
 @import "./Pages/menu-palette_du_gout.scss";

@@ -1,0 +1,27 @@
+.footer {
+    color: #fff;
+    background-color: $color-dark;
+    @include flex(flex-start, center);
+    flex-direction: column;
+    padding: 20px;
+
+    &__logo {
+        width: 100px;
+        margin-bottom: 20px;
+    }
+
+    &__nav {
+        @include flex(start, space-between);
+        flex-direction: column;
+        height: 100px;
+
+        &>li>i {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        &>li>a {
+            color: #fff;
+        }
+    }
+}

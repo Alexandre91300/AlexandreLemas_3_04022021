@@ -1,0 +1,17 @@
+.header {
+    @include flex;
+    height: 80px;
+    box-shadow: 3px 5px 15px rgba($color: #000000, $alpha: 0.2);
+
+    &__arrow {
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        color: black;
+    }
+
+    &__logo {
+        width: 200px;
+    }
+
+}

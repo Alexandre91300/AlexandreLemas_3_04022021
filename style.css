@@ -7,6 +7,51 @@
         <div class="loader__cube loader__cube--3"></div>
     </div>
 */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.header__arrow {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  color: black;
+}
+.header__logo {
+  width: 200px;
+}
+
+.footer {
+  color: #fff;
+  background-color: #343333;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.footer__logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+.footer__nav {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100px;
+}
+.footer__nav > li > i {
+  width: 20px;
+  margin-right: 10px;
+}
+.footer__nav > li > a {
+  color: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -77,17 +122,6 @@
     transform: rotate(360deg);
     border-radius: 100%;
   }
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80px;
-  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
-}
-.header__logo {
-  width: 200px;
 }
 
 .localisation {
@@ -281,26 +315,25 @@
   transition-timing-function: ease-in-out;
 }
 .restaurant__box__icon > button:focus + .restaurant__box__icon--plein {
-  transform: scaleY(1);
+  transform: scale(1);
   z-index: 10;
 }
 .restaurant__box__icon > button:focus {
   opacity: 0;
-  transform: scaleY(0);
+  transform: scale(0);
 }
 .restaurant__box__icon > button {
   border: none;
   background-color: #fff;
   opacity: 1;
-  transform: scaleY(1);
+  transform: scale(1);
   cursor: pointer;
 }
 .restaurant__box__icon--plein {
   width: 23px;
   height: 21px;
   position: absolute;
-  transform: scaleY(0);
-  transform-origin: bottom;
+  transform: scale(0);
 }
 .restaurant__box__nouveau {
   display: flex;
@@ -313,41 +346,6 @@
   height: 30px;
   font-size: 12px;
   transform: translate(210px, -210px);
-}
-
-.footer {
-  color: #fff;
-  background-color: #343333;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  padding: 20px;
-}
-.footer__logo {
-  width: 100px;
-  margin-bottom: 20px;
-}
-.footer__nav {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  flex-direction: column;
-  height: 100px;
-}
-.footer__nav > li > i {
-  width: 20px;
-  margin-right: 10px;
-}
-.footer__nav > li > a {
-  color: #fff;
-}
-
-.header__arrow {
-  position: absolute;
-  top: 30px;
-  left: 20px;
-  color: black;
 }
 
 .menu {
@@ -389,26 +387,25 @@
   transition-timing-function: ease-in-out;
 }
 .menu__ctn__icon > button:focus + .menu__ctn__icon--plein {
-  transform: scaleY(1);
+  transform: scale(1);
   z-index: 10;
 }
 .menu__ctn__icon > button:focus {
   opacity: 0;
-  transform: scaleY(0);
+  transform: scale(0);
 }
 .menu__ctn__icon > button {
   border: none;
   background-color: #f6f6f7;
   opacity: 1;
-  transform: scaleY(1);
+  transform: scale(1);
   cursor: pointer;
 }
 .menu__ctn__icon--plein {
   width: 23px;
   height: 21px;
   position: absolute;
-  transform: scaleY(0);
-  transform-origin: bottom;
+  transform: scale(0);
 }
 .menu__ctn__box {
   margin-top: 20px;
@@ -417,6 +414,7 @@
   justify-content: space-between;
   flex-direction: column;
   width: 100%;
+  max-width: 600px;
 }
 .menu__ctn__box > h2 {
   width: 100%;
@@ -434,43 +432,6 @@
   display: block;
   margin: 5px 0;
 }
-.menu__ctn__box > div {
-  background-color: #fff;
-  width: 90%;
-  height: 70px;
-  margin: 10px 0;
-  border-radius: 20px;
-  padding-left: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
-}
-.menu__ctn__box > div > div {
-  width: 80%;
-}
-.menu__ctn__box > div > div > h3 {
-  margin-bottom: 5px;
-  font-size: 18px;
-}
-.menu__ctn__box > div > div > p {
-  font-size: 14px;
-  color: #343333;
-  text-overflow: ellipsis;
-  width: auto;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.menu__ctn__box__prix {
-  margin-right: 15px;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 15px;
-  font-weight: bold;
-  font-size: 14px;
-}
 .menu__ctn__btn {
   width: 150px;
   height: 50px;
@@ -486,6 +447,97 @@
 .menu__ctn__btn:hover {
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
   background: linear-gradient(rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
+}
+
+.ctn {
+  overflow: hidden;
+  cursor: pointer;
+  animation-name: on-load;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  background-color: #fff;
+  width: 90%;
+  height: 70px;
+  margin: 10px 0;
+  border-radius: 20px;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+.ctn__txt {
+  flex-grow: 1;
+}
+.ctn__txt > h1 {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.ctn__txt__ctn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+.ctn__txt__ctn > p:nth-child(2) {
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.ctn__txt__ctn p:first-child {
+  flex-grow: 1;
+  font-size: 14px;
+  color: #343333;
+  text-overflow: ellipsis;
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.ctn__check {
+  width: 0;
+  background-color: #99E2D0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: 400ms;
+  transform-origin: right;
+  overflow: hidden;
+  border-radius: 0 20px 20px 0;
+}
+.ctn:hover .ctn__check {
+  width: 70px;
+  transition: 400ms;
+}
+.ctn:hover .ctn__check > i {
+  animation-name: rotate;
+  animation-duration: 400ms;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes on-load {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.ctn--2 {
+  animation-delay: 100ms;
+}
+.ctn--3 {
+  animation-delay: 200ms;
 }
 
 /*# sourceMappingURL=style.css.map */
