@@ -1,0 +1,149 @@
+.header__arrow {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    color: black;
+}
+
+.menu {
+    width: 100%;
+    height: 1388px;
+
+    &__img {
+        height: 300px;
+        width: 100%;
+    }
+
+    &__ctn {
+        background-color: $color-bg;
+        border-radius: 30px 30px 0 0;
+        padding-top: 30px;
+        transform: translateY(-70px);
+        @include flex;
+        flex-direction: column;
+
+        &__title {
+            @include font-title;
+            font-size: 26px;
+        }
+
+        &__title-icon {
+            @include flex(center, space-between);
+            width: 100%;
+            padding: 0 10px;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        
+    }
+
+    // COEUR
+    &__ctn__icon {
+        @include flex;
+        width: 50px;
+        transition-timing-function: ease-in-out;
+
+
+        &>button:focus+.menu__ctn__icon--plein {
+            transform: scaleY(1);
+            z-index: 10;
+        }
+
+        &>button:focus {
+            opacity: 0;
+            transform: scaleY(0);
+        }
+
+        &>button {
+            border: none;
+            background-color: $color-bg;
+            opacity: 1;
+            transform: scaleY(1);
+            cursor: pointer;
+        }
+
+        &--plein {
+            width: 23px;
+            height: 21px;
+            position: absolute;
+            transform: scaleY(0);
+            transform-origin: bottom
+        }
+    }
+
+    // MENU
+    &__ctn__box {
+        margin-top: 20px;
+        @include flex(center, space-between);
+        flex-direction: column;
+        width: 100%;
+
+        &>h2 {
+            width: 100%;
+            text-align: start;
+            padding-left: 20px;
+            font-size: 16px;
+            color: $color-dark;
+            font-weight: lighter;
+
+            &::after {
+                content: "";
+                width: 40px;
+                height: 3px;
+                background-color: $color-tertiaire;
+                display: block;
+                margin: 5px 0;
+            }
+        }
+
+        // PLAT CONTAINER
+        &>div {
+            background-color: #fff;
+            width: 90%;
+            height: 70px;
+            margin: 10px 0;
+            border-radius: 20px;
+            padding-left: 15px;
+            @include flex(center, space-between);
+            box-shadow: 3px 5px 15px rgba($color: #000000, $alpha: 0.2);
+
+
+            &>div {
+                width: 80%;
+            }
+
+            &>div>h3 {
+                margin-bottom: 5px;
+                font-size: 18px;
+            }
+
+            &>div>p {
+                font-size: 14px;
+                color: $color-dark;
+                text-overflow: ellipsis;
+                width: auto;
+                white-space: nowrap;
+                overflow: hidden;
+
+            }
+
+
+        }
+
+        &__prix {
+            margin-right: 15px;
+            height: 100%;
+            @include flex(flex-end, center);
+            padding-bottom: 15px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+    }
+
+    &__ctn__btn {
+        @include button(150px, 50px);
+        margin: 30px 0 40px 0;
+    }
+}

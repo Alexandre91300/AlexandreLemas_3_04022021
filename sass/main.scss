@@ -1,0 +1,10 @@
+@import "./Utils/variables";
+@import "./Utils/mixins";
+
+@import "./Base/reset";
+
+@import "./Composants/button";
+@import "./Layout/loader";
+
+@import "./Pages/accueil.scss";
+@import "./Pages/menu-palette_du_gout.scss";

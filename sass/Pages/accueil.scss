@@ -1,14 +1,6 @@
-@import "../Utils/variables";
-@import "../Utils/mixins";
-@import "../Base/reset";
-@import "../Composants/button";
-@import "../Composants/loader";
-
 * {
     @include reset-all;
     @include font-texte;
-    object-fit: cover;
-    scroll-behavior: smooth;
 }
 
 .loader {
@@ -81,14 +73,6 @@
 
     &__btn {
         @include button;
-
-        &>a {
-            color: #fff;
-            width: 100%;
-            height: 100%;
-            display: inline-block;
-            @include flex;
-        }
     }
 }
 

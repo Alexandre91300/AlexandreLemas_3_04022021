@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OH MY FOOD</title>
-    <link rel="stylesheet" href="css/accueil.css">
+    <title>Accueil - OH MY FOOD</title>
+    <link rel="icon" href="images/logo/ohmyfood@2x.svg">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
 </head>
-
 <body>
-
     <div class="loader">
         <div class="loader__cube"></div>
         <div class="loader__cube loader__cube--2"></div>
@@ -29,7 +28,7 @@
     <section class="presentation">
         <h1 class="presentation__title">Réserver le menu qui vous convient</h1>
         <h2 class="presentation__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins.</h2>
-        <button class="presentation__btn"><a href="#restaurant">Explorer nos restaurants</a></button>
+        <button class="presentation__btn">Explorer nos restaurants</button>
     </section>
 
     <section class="fonctionnement">
@@ -54,7 +53,7 @@
     <section class="restaurant" id="restaurant">
         <h1 class="restaurant__title">Restaurants</h1>
         <div>
-            <div class="restaurant__box">
+            <a class="restaurant__box" href="/html/menu-palette_du_gout.html">
                 <img src="images/restaurants/palette-gout.jpg" alt="" class="restaurant__box__img">
                 <h2 class="restaurant__box__title">La palette du goût</h2>
                 <p class="restaurant__box__subtitle">Ménilmontant</p>
@@ -66,7 +65,7 @@
                 </div>
                 <p class="restaurant__box__nouveau">Nouveau</p>
 
-            </div>
+            </a>
             <div class="restaurant__box">
                 <img src="images/restaurants/note-enchanté.jpg" alt="" class="restaurant__box__img">
                 <h2 class="restaurant__box__title">La note enchantée</h2>
@@ -111,7 +110,7 @@
             <li><i class="fas fa-utensils"></i><a href="#">Proposer un restaurant</a></li>
             <li><i class="fas fa-hands-helping"></i><a href="#">Devenir partenaire</a></li>
             <li><a href="#">Mentions légales</a></li>
-            <li><a href="mailto: contact@ohmyfood.com">Contact</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </footer>
 
