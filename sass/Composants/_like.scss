@@ -1,0 +1,31 @@
+.icon {
+    @include flex;
+    width: 50px;
+    transition-timing-function: ease-in-out;
+
+
+    &>button:focus+.icon--plein {
+        transform: scale(1);
+        z-index: 10;
+    }
+
+    &>button:focus {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    &>button {
+        border: none;
+        background-color: $color-bg;
+        opacity: 1;
+        transform: scale(1);
+        cursor: pointer;
+    }
+
+    &--plein {
+        width: 23px;
+        height: 22px;
+        position: absolute;
+        transform: scale(0);
+    }
+}
