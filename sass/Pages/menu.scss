@@ -2,8 +2,8 @@
     width: 100%;
     height: 1388px;
 
-    &--height{
-    height: 1478px;
+    &--height {
+        height: 1478px;
     }
 
     &__img {
@@ -66,7 +66,7 @@
     }
 
     &__ctn__btn {
-        @include button(150px, 50px);
+        @include button(185px, 50px);
         margin: 30px 0 40px 0;
     }
 }
@@ -83,7 +83,7 @@
     width: 90%;
     height: 70px;
     margin: 10px 0;
-    border-radius: 20px;
+    border-radius: 15px;
     padding-left: 15px;
     @include flex(center, space-between);
     box-shadow: 3px 5px 15px rgba($color: #000000, $alpha: 0.2);
@@ -95,6 +95,11 @@
         &>h1 {
             margin-bottom: 5px;
             font-size: 18px;
+            text-overflow: ellipsis;
+            width: 90%;
+            white-space: nowrap;
+            overflow: hidden;
+
         }
 
         &__ctn {
@@ -132,11 +137,15 @@
         transition: 400ms;
         transform-origin: right;
         overflow: hidden;
-        border-radius: 0 20px 20px 0;
+        border-radius: 0 15px 15px 0;
+
+        &>i {
+            font-size: 20px;
+        }
     }
 
     &:hover .ctn__check {
-        width: 70px;
+        width: 60px;
         transition: 400ms;
     }
 

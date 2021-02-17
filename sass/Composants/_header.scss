@@ -1,17 +1,28 @@
+body{
+    margin-top: $header-height;
+}
 .header {
     @include flex;
-    height: 80px;
-    box-shadow: 3px 5px 15px rgba($color: #000000, $alpha: 0.2);
-
+    height: $header-height;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba($color: #000000, $alpha: 0.2);
+    position: absolute;
+    transform: translateY(-$header-height);
     &__arrow {
         position: absolute;
-        top: 30px;
+        top: 20px;
         left: 20px;
-        color: black;
+        color: $color-dark;
+        font-size: 18px;
     }
 
     &__logo {
+        width: 170px;
+        @include tablette-only{
         width: 200px;
+        }
     }
 
 }
+
