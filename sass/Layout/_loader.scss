@@ -6,7 +6,7 @@
     height: 105vh;
     opacity: 1;
     animation: loader-bg 1s ease-in-out 3s 1 normal forwards;
-    @include flex(center, space-around);
+    @include flex;
     flex-direction: column;
     transform: translateY(-80px);
 
@@ -27,21 +27,13 @@
     }
 
     &__cube {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
         transform: translate(-50%, -50%);
         animation-name: loader-cube;
         animation-timing-function: ease-in-out;
         animation-iteration-count: 3;
         animation-duration: 1.5s;
-
-        &--2 {
-            animation-delay: 0.1s;
-        }
-
-        &--3 {
-            animation-delay: 0.2s;
-        }
 
         @keyframes loader-cube {
             0% {
