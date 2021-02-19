@@ -18,6 +18,11 @@
         transform: translateY(-70px);
         @include flex;
         flex-direction: column;
+        height: 1154px;
+
+        &--height{
+        height: 1244px;
+        }
 
         &__title {
             @include font-title;
@@ -27,8 +32,8 @@
         &__title-icon {
             @include flex(center, space-between);
             width: 100%;
-            padding: 0 10px;
-            max-width: 350px;
+            padding: 0 20px;
+            max-width: 600px;
             margin: 0 auto;
         }
 
@@ -67,7 +72,8 @@
 
     &__ctn__btn {
         @include button(185px, 50px);
-        margin: 30px 0 40px 0;
+        margin: auto;
+        
     }
 }
 
